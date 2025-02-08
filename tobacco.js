@@ -15,5 +15,8 @@ elements.tobacco = {
 if (!eLists.ORGANIC) eLists.ORGANIC = [];
 eLists.ORGANIC.push("tobacco");
 
-// Выводим сообщение в консоль, чтобы проверить, загрузился ли мод
-console.log("Мод 'tobacco.js' загружен!");
+// Run after all mods are loaded, for cross-mod compatibility
+runAfterLoad(function() {
+    // Выводим сообщение в консоль, чтобы проверить, загрузился ли мод
+    console.log("Мод 'tobacco.js' загружен!");
+});
