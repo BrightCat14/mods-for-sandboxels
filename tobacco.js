@@ -1,6 +1,6 @@
 elements.tobacco = {
     color: ["#6b4f32", "#705438", "#7a5e42", "#84684c", "#8f7355"],
-    behavior: behaviors.POWDER, // Используем готовое поведение порошков
+    behavior: behaviors.POWDER,
     category: "powders",
     tempHigh: 250,
     stateHigh: ["ash", "smoke", "smoke", "smoke"],
@@ -11,6 +11,9 @@ elements.tobacco = {
     density: 300,
 };
 
-// Добавляем табак в список органики (по желанию)
+// Проверяем, существует ли eLists.ORGANIC и добавляем туда табак
 if (!eLists.ORGANIC) eLists.ORGANIC = [];
 eLists.ORGANIC.push("tobacco");
+
+// Выводим сообщение в консоль, чтобы проверить, загрузился ли мод
+console.log("Мод 'tobacco.js' загружен!");
