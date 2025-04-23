@@ -12,8 +12,8 @@ elements.tobacco = {
 };
 
 // Проверяем, существует ли eLists.ORGANIC и добавляем туда табак
-if (!eLists.ORGANIC) eLists.ORGANIC = [];
-eLists.ORGANIC.push("tobacco");
+if (!eLists.POWDERS) eLists.POWDERS = [];
+eLists.POWDERS.push("tobacco");
 
 // Run after all mods are loaded, for cross-mod compatibility
 runAfterLoad(function() {
