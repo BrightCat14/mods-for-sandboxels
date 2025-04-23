@@ -3,7 +3,7 @@ elements.tobacco = {
     behavior: behaviors.POWDER,
     category: "powders",
     tempHigh: 250,
-    stateHigh: ["ash", "smoke", "smoke", "smoke"],
+    stateHigh: ["ash", "smoke", "smoke", "smoke"], // Эти элементы уже есть в Sandboxels
     burn: 40,
     burnTime: 150,
     burnInto: ["ash", "smoke", "smoke", "smoke"],
@@ -11,12 +11,11 @@ elements.tobacco = {
     density: 300,
 };
 
-// Проверяем, существует ли eLists.ORGANIC и добавляем туда табак
+// Добавим в список powders (чтобы отображалось по фильтру)
 if (!eLists.POWDERS) eLists.POWDERS = [];
 eLists.POWDERS.push("tobacco");
 
-// Run after all mods are loaded, for cross-mod compatibility
+// Проверим загрузку мода
 runAfterLoad(function() {
-    // Выводим сообщение в консоль, чтобы проверить, загрузился ли мод
     console.log("Мод 'tobacco.js' загружен!");
 });
